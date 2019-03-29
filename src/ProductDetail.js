@@ -16,9 +16,10 @@ class ProductDetail extends Component {
 
 
     componentDidMount() {
+        let API_KEY = process.env.REACT_APP_API_KEY
         const id = this.props.match.params.id
         console.log( 'ID?:', id )
-        let url = `https://thingproxy.freeboard.io/fetch/https://openapi.etsy.com/v2/listings/${ id }?includes=Images&api_key=nszdmo8kz1ia6wmqt2t4ag6c`
+        let url = `https://thingproxy.freeboard.io/fetch/https://openapi.etsy.com/v2/listings/${ id }?includes=Images&api_key=${ API_KEY }`
         fetch( url )
             .then( response => response.json() )
             .then( response => {
