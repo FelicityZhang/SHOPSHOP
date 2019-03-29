@@ -27,7 +27,8 @@ class App extends Component {
 
   handleList( e ) {
     e.preventDefault()
-    let endPoint = `https://thingproxy.freeboard.io/fetch/https://openapi.etsy.com/v2/listings/active?tags=${ this.state.tag }&limit=50&includes=Images:1&api_key=nszdmo8kz1ia6wmqt2t4ag6c`
+    let API_KEY = process.env.REACT_APP_API_KEY
+    let endPoint = `https://thingproxy.freeboard.io/fetch/https://openapi.etsy.com/v2/listings/active?tags=${ this.state.tag }&limit=50&includes=Images:1&api_key=${ API_KEY }`
     fetch( endPoint )
       .then( response => response.json() )
       .then( data => {
