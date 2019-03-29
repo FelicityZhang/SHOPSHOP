@@ -1,0 +1,35 @@
+.homeImg{
+  display:flex;
+  flex-direction: row;
+  width:1100px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+
+
+
+  .img{
+    width: 440px;
+    height: 440px;
+    margin-top:20px;
+  }
+
+
+  .dressContainer{
+    background-image: url(Img/dress.png);
+
+  }
+
+  .pantsContainer{
+    background-image: url(Img/pants.png);
+  }
+
+  .shoesContainer{
+    background-image: url(Img/shoes.png);
+  }
+
+  .shirtsContainer{
+    background-image: url(Img/shirt.png);
+  }
